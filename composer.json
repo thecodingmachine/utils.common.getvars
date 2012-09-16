@@ -1,0 +1,21 @@
+{
+    "name": "mouf/utils.common.getvars",
+    "description": "This is a legacy non-OO package and should not be used in recent developments. A simple package that provides functions to get the parameters from the request in a consistent way. The varaiables can be rerieved in a way that is independent of the php.ini configuration file. Especially, it can cancel the effect of the dreadful 'magic_quotes' parameter.",
+    "keywords": ["mouf", "request", "protect"],
+    "homepage": "https://github.com/thecodingmachine/utils.common.getvars",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "David Négrier",
+            "email": "d.negrier@thecodingmachine.com",
+            "homepage": "http://mouf-php.com"
+        }
+    ],
+    "require": {
+    	"php": ">=5.2.0"
+    },
+    "autoload": {
+        "files": ["src/tcm_utils.php", "src/TcmUtilsException.php"]
+    },
+}
