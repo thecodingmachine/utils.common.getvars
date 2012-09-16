@@ -17,5 +17,5 @@
     },
     "autoload": {
         "files": ["src/tcm_utils.php", "src/TcmUtilsException.php"]
-    },
+    }
 }
