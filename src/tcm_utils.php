@@ -14,6 +14,8 @@
  * @version   $Id: xaja_tcm_utils.php,v 1.12 2006/05/24 15:20:34 dnegrier Exp $
  */
 
+ if (!function_exists('userinput_to_plainstring')) {
+ 
 /**
  * userinput_to_plainstring() - Convert userinput to plain string.
  *
@@ -318,4 +320,5 @@ function string_to_sql($var) {
 			return 'NULL';
 }
 
+}
 ?>

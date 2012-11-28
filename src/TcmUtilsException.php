@@ -1,4 +1,7 @@
 <?php
-class TcmUtilsException extends Exception {
+if (!class_exists("TcmUtilsException")) {
 
+	class TcmUtilsException extends Exception {
+
+	}
 }
