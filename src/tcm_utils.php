@@ -22,7 +22,7 @@
  * @param		string	The string to convert
  */
 function userinput_to_plainstring($str) {
-	if (get_magic_quotes_gpc()==1)
+	if (version_compare(phpversion(), '7.4.0', '<') && get_magic_quotes_gpc()==1)
 	{
 		$str = stripslashes($str);
 		// Rajouter les slashes soumis par l'utilisateur
@@ -90,7 +90,7 @@ function dbdate_to_displaydate($strDate, $ccode="en", $long=false)
 function get($var, $type="unknown_type", $compulsory=false, $default_value=false, $origin="R") {
 	for ($i=0; $i<strlen($origin); $i++)
 	{
-		if ($origin{$i} == 'R' || $origin{$i} == 'r')
+		if ($origin[$i] == 'R' || $origin[$i] == 'r')
 		{
 			// get de variables classiques
 			if (isset($_REQUEST[$var]))
@@ -155,7 +155,7 @@ function get($var, $type="unknown_type", $compulsory=false, $default_value=false
 				}
 			}
 		}
-		elseif ($origin{$i} == 'S' || $origin{$i} == 's')
+		elseif ($origin[$i] == 'S' || $origin[$i] == 's')
 		{
 			
 			if (isset($_SESSION[$var]))
@@ -220,7 +220,7 @@ function get($var, $type="unknown_type", $compulsory=false, $default_value=false
 				}
 			}
 		}
-		elseif ($origin{$i} == 'C' || $origin{$i} == 'c')
+		elseif ($origin[$i] == 'C' || $origin[$i] == 'c')
 		{
 			if (isset($_COOKIE[$var]))
 			{
